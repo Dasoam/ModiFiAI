@@ -1,10 +1,6 @@
 import re
 from logger import logger
 
-# ----------------------------
-# Core Functions
-# ----------------------------
-
 def load_wordlist(filepath):
     """Load words from file, ignoring comments and empty lines"""
     try:
@@ -108,21 +104,3 @@ def detect_profanity(comment, lang_code='en'):
         'normalized_text': normalized_text
     }
 
-# ----------------------------
-# Example Usage
-# ----------------------------
-
-# test_comments = [
-#     ("F@ck this sh!t and बहनचोद!", 'en'),
-#     ("यह चूतिया काम है और m@darch0d भी है", 'hi'),
-#     ("Awesome content nothing bad here", 'en')
-# ]
-#
-# for comment, lang in test_comments:
-#     result = detect_profanity(comment, lang)
-#     print(f"\nInput: {comment}")
-#     print(f"Language: {lang.upper()}")
-#     print(f"Normalized: {result['normalized_text']}")
-#     print(f"Total words: {result['total_words']}")
-#     print(f"Profane count: {result['profane_count']}")
-#     print(f"Profane words: {result['profane_words']}")
